@@ -3,12 +3,14 @@ package com.andres.springboot.di.app.springboot_di.repositories;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
 
 import com.andres.springboot.di.app.springboot_di.models.Product;
 
-@Component
-public class ProductRepository implements InterfaceProducto {
+@Primary
+@Repository("productList")
+public class ProductRepository implements InterfaceProduct {
 
     List<Product> data;
 

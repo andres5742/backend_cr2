@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.andres.springboot.di.app.springboot_di.models.Product;
 
-public interface InterfaceProducto {
+public interface InterfaceProduct {
 
     List<Product> findAll();
 
