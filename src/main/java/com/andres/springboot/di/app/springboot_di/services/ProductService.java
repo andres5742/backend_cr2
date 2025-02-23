@@ -1,16 +1,23 @@
 package com.andres.springboot.di.app.springboot_di.services;
 
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.andres.springboot.di.app.springboot_di.models.Product;
 import com.andres.springboot.di.app.springboot_di.repositories.ProductRepository;
 
-public class ProductService {
 
-    ProductRepository repository = new ProductRepository();
+@Component
+public class ProductService implements InterfaceServiceProducto {
 
+    @Autowired
+    ProductRepository repository ;
+
+   
+    @Override
     public List<Product> findAll() {
 
         return repository.findAll().stream().map(p -> {
@@ -22,7 +29,7 @@ public class ProductService {
         }).collect(Collectors.toList());
 
     }
-
+    @Override
     public Product findById(Long id) {
         return repository.findById(id);
     }
