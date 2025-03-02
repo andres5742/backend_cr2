@@ -15,7 +15,7 @@ public class ProductServiceImpl implements InterfaceServiceProducto {
 
     private InterfaceProductRepos repository;
 
-    public ProductServiceImpl(@Qualifier("ProductRepositoryJson") InterfaceProductRepos repository) {
+    public ProductServiceImpl(@Qualifier("ProductJson") InterfaceProductRepos repository) {
         this.repository = repository;
     }
 
