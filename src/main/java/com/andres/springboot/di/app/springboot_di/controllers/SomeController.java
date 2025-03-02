@@ -3,7 +3,7 @@ package com.andres.springboot.di.app.springboot_di.controllers;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.andres.springboot.di.app.springboot_di.models.Product;
-import com.andres.springboot.di.app.springboot_di.repositories.InterfaceProduct;
+import com.andres.springboot.di.app.springboot_di.services.InterfaceServiceProducto;
 
 import java.util.List;
 
@@ -12,21 +12,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @RestController
 @RequestMapping("/api")
 public class SomeController {
-
-    @Autowired // lo quitamos para poner un condstructor se puede de las dos formas
-    private InterfaceProduct serviceProduct;
+    
+    @Autowired
+    private InterfaceServiceProducto service;
 
     @GetMapping
     public List<Product> list() {
-        return serviceProduct.findAll();
+        return service.findAll();
     }
-
+    
     @GetMapping("/{id}")
-    public Product geProduct(@PathVariable Long id) {
-        return serviceProduct.findById(id);
+    public Product show(@PathVariable Long id) {
+        return service.findById(id);
     }
-
 }

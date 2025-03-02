@@ -10,7 +10,7 @@ import com.andres.springboot.di.app.springboot_di.models.Product;
 
 @Primary
 @Repository("productList")
-public class ProductRepository implements InterfaceProduct {
+public class ProductRepository implements InterfaceProductRepos {
 
     List<Product> data;
 

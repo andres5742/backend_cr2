@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "xbox 360 ",
+        "price": 1500
+    },
+    {
+        "id": 2,
+        "name": "alexa inteligente",
+        "price": 500
+    },
+    {
+        "id": 3,
+        "name": "escritorio ajustable",
+        "price": 2500
+    },
+    {
+        "id": 4,
+        "name": "teclado mecanico 100%",
+        "price": 800
+    }
+]
